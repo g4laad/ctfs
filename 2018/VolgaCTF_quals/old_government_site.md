@@ -15,7 +15,7 @@ We run a script to see if there were some hidden pages and found one with the id
 It asks us to enter a website.
 If you enter a correct website like http://google.com you have a string showing `validated` whereas is you only put google.com, it shows `error`.
 
-When you enter a correct website, the server does a GET request on it.²
+When you enter a correct website, the server does a GET request on it.
 
 So we played a bit with this field and found out that `/etc` is a correct website. We then tried with the linux filesystem `/var` and some linux commands `/bin/ls` etc and finally, we tried `/flag`. It worked. Nice, maybe it's where the flag is, but can we access it ?
 
