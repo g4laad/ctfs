@@ -17,7 +17,7 @@ If you enter a correct website like http://google.com you have a string showing 
 
 When you enter a correct website, the server does a GET request on it.
 
-So we played a bit with this field and found out that `/etc` is a correct website. We then tried with the linux filesystem `/var` and some linux commands `/bin/ls` etc and finally, we tried `/flag`. It worked. Nice, maybe it's where the flag is, but can we access it ?
+So we played a bit with this field and found out that `/etc` is a correct website. We then tried with the linux filesystem `/var` and some linux commands `/bin/ls` etc and finally, we tried `/flag`. It worked. Nice, maybe it's where the flag is, but how can we access it ?
 
 Up to now, we know that the script behind is executing the command we give or send a GET request on the url.
 
